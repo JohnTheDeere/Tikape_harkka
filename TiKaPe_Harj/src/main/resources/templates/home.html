@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Drinkkilista</title>
+    </head>
+    
+    <body>
+        <h1>Menu</h1>
+        
+        <p>
+            Alla näkyy drinkkilista
+        </p>
+        
+        
+        <ul>
+            <li th:each="annos : ${lista}">
+                <a th:href="@{~/drinks/{id}(id=${annos.id})}">
+                    <span th:text="${annos.nimi}">User</span>
+                </a>
+            </li>
+        </ul>
+        
+ 
+        <ul>
+            <li>
+                <a href="/drinks"> Luo uusi drinkki, tai poista jo tehty drinkki </a>
+            </li>
+            
+            <li>
+                <a href="/ingredients"> Tarkastele ja lisää aineksia drinkkeihin </a>
+            </li>
+            
+            <li>
+                <a href="/statistics"> Tarkastele tilastotietoa aineksien käytöstä drinkeissä </a>
+            </li>
+            
+        </ul>
+        
+       
+        
+    </body>
+    
+</html>

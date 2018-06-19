@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Tilasto</title>
+    </head>
+    
+    <body>
+        <h1>Alla näkyy tilastoa raaka-aineiden käytöstä</h1>
+        
+                    
+        <ul>
+            <li th:each="laskuri_olio : ${laskurilista}">
+                <p> 
+                    Raaka-aine 
+                    <span th:text="${laskuri_olio.nimi}"></span>
+                    on käytetty
+                    
+                    <span th:text="${laskuri_olio.id}"></span>
+                     annoksessa
+                </p>
+            </li>
+        </ul> 
+        
+        <p>
+            Mikäli tiettyä raaka-ainetta ei näy, sitä ei olla käytetty vielä annoksessa!
+        </p>
+        
+     
+        <ul>
+            <a href="/home"> Takaisin drinkkilistaukseen </a>
+        </ul>
+        
+
+        
+    </body>
+    
+</html>

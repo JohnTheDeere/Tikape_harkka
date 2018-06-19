@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Resepti</title>
+    </head>
+    
+    <body>
+        <h1>Menu</h1>
+        
+        <p>
+            Alla näkyy valitun drinkin resepti:
+        </p>
+        
+        
+        
+        <ul>
+            <li th:each="arvo : ${lista}">
+                
+                <p>
+                <span th:text="${arvo.raakaaine}"> </span>,
+                               
+                <span th:text="${arvo.maara}"> </span>,
+
+                <span th:text="${arvo.ohje}"> </span>
+                
+                </p>
+                
+            </li>
+        </ul>
+        
+        <p>
+            (Mikäli sivulla ei näy työohjeita, olet luonut drinkille nimen, mutta et ole lisännyt sille reseptiä!) 
+        </p>
+        
+        
+         <ul>
+            <a href="/home"> Takaisin drinkkilistaukseen </a>
+        </ul>
+ 
+        
+    </body>
+    
+</html>
